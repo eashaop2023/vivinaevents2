@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+
+html,
+body,
+#root {
+  height: 100%;
+  /* background: radial-gradient(circle at top, #2b0006, #4b000a, #2b0006); */
+  overscroll-behavior: none;
+  background: linear-gradient(to bottom right,#2b0006,#4b000a,#2b0006);
+}
