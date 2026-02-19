@@ -5,7 +5,7 @@ import pro from "../assets/photos/pro.jpg";
 import pro1 from "../assets/photos/pro1.jpg";
 import catering2 from "../assets/photos/catering2.jpg";
 import locationshoot from "../assets/photos/locationshoot.jpg";
-import founder from "../assets/photos/Founder.png";
+import founder from "../assets/photos/founder.png";
 import logo from "../assets/photos/logo.png";
 
 const AboutVivina = () => {
