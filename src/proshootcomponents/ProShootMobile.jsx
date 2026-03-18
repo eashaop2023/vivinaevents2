@@ -1,6 +1,7 @@
-
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+import ProMobile from "../assets/photos/ProMobile.png";
 
 const ProShootMobile = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -33,7 +34,7 @@ const ProShootMobile = () => {
         {/* Phone mockup */}
         <div className="flex justify-center mb-16 sm:mb-24">
           <div
-            className="w-[180px] h-[360px] sm:w-[220px] sm:h-[440px] md:w-[250px] md:h-[500px]
+            className="w-[180px] h-[340px] sm:w-[220px] sm:h-[440px] md:w-[250px] md:h-[450px]
                        bg-[#0b0b12] rounded-[26px] border border-gray-700 shadow-2xl 
                        flex items-center justify-center"
             style={{
@@ -44,9 +45,10 @@ const ProShootMobile = () => {
             }}
           >
             <img
-              src="https://www.flashoot.com/assets/web_application-CKt-GzbF.png"
+              src={ProMobile}
               alt="App Preview"
-              className="w-[160px] h-[330px] sm:w-[190px] sm:h-[400px] md:w-[220px] md:h-[460px] object-cover rounded"
+              className="w-full h-full object-contain rounded-[20px]"
+              // className="w-[160px] h-[330px] sm:w-[190px] sm:h-[400px] md:w-[220px] md:h-[460px] object-cover rounded"
             />
           </div>
         </div>

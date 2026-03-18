@@ -53,7 +53,7 @@ const KnowProShoot = () => {
             <div className="flex justify-center mb-4">
               <span className="flex items-center gap-2 px-4 py-2 text-sm text-white rounded-full border border-orange-500 bg-orange-500/10">
                 <AutoAwesomeOutlinedIcon className="text-red-500" />
-                Get to know Flashoot
+                Get to know ProShoot
               </span>
             </div>
 

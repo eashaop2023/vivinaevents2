@@ -36,7 +36,7 @@ const items = [
   },
   { 
     icon:<WorkspacePremiumOutlinedIcon fontSize="large"/>, 
-    title: "Flashooter Partner Kit", 
+    title: "ProShooter Partner Kit", 
     desc: "Get your official T-shirt,partner badge, and exclusive access to the Proshoot App." 
   },
   { 
@@ -98,5 +98,3 @@ const WhyJoin=()=>{
   );
 }
 export default WhyJoin
-
-

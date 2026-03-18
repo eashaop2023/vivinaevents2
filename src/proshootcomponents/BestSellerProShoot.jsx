@@ -57,7 +57,7 @@ const BestSellerProShoot= () => {
                 <CheckOutlinedIcon className="text-red-500" /> Trained & Certified Reel Maker
               </li>
               <li className="flex gap-3">
-                <CheckOutlinedIcon className="text-red-500" /> Flashoot Branding Included
+                <CheckOutlinedIcon className="text-red-500" /> ProShoot Branding Included
               </li>
             </ul>
 
@@ -117,7 +117,7 @@ const BestSellerProShoot= () => {
                 <CheckOutlinedIcon className="text-red-500" /> Trained & Certified Reel Maker
               </li>
               <li className="flex gap-3">
-                <CheckOutlinedIcon className="text-red-500" /> Flashoot Branding Included
+                <CheckOutlinedIcon className="text-red-500" /> ProShoot Branding Included
               </li>
             </ul>
 

@@ -1,4 +1,3 @@
-
 import React from "react";
 import img2 from "../assets/photos/img2.png";
 import img3 from "../assets/photos/img3.png";
@@ -24,7 +23,7 @@ const WhyProShoot= () => {
     {
       img: img4,
       title: "Unbelievable Pricing",
-      desc: "Each Reel starts 1999/-",
+      desc: "Affordable reels for every occasion",
     },
     {
       img: img5,
