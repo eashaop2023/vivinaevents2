@@ -7,7 +7,7 @@ import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDown
     question:
       "How much do I get paid per shoot?",
     answer:
-      "You earn 70% of the booking. Most shoot range from 1,999-4,999.",
+      "You’ll be paid per shoot. The amount depends on the booking and shoot type.",
   },
   {
     question: "I don't have experience. Can I still apply?",
@@ -108,4 +108,3 @@ const FAQ = () => {
 };
 
 export default FAQ;
-

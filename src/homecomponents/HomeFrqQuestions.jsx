@@ -1,164 +1,110 @@
+import { useState } from "react";
+import AutoAwesomeOutlinedIcon from "@mui/icons-material/AutoAwesomeOutlined";
+import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
 
-import React, { useState } from "react";
-import {
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-  Typography,
-  Box,
-} from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
-
-const faqData = [
+ const faqs = [
   {
-    question: "What exactly is ProShoot?",
+    question:
+      "How much do I get paid per shoot?",
     answer:
-      "ProShoot is an real-time content creation platform where you can book trained iPhone creators (called ProShooters) who shoot, edit,and deliver reels withib 10 minutes-- perfect for creators, brands, weddings, and events.",
+      "You’ll be paid per shoot. The amount depends on the booking and shoot type.",
   },
   {
-    question: "How is it different from hiring a regular videographer?",
+    question: "I don't have experience. Can I still apply?",
     answer:
-      "Unllike traditional services, ProShoot is fast, affordable, and reliable. We deliver professional-grade reels instantly, all shot on iPhone by certified creators who go through a 6-step training and evalution process.",
+      "Yes. We train you on everything. your creativity matters more.",
   },
   {
-    question: "What packages do you offer?",
+    question: "Can I work only on weekends or evenings?",
     answer:
-      "We offer flexible options including: .₹1999 for up to 2 reels in 45 minutes.₹4999 for up to 2 reels in a 3-hour session.₹9999 for day-long shoots with up to 3 reels, RAW fotage, and 15+ mobiles photos. You can also add extras like mic, light, extra reels, and additional partners.",
+      "Yes, you can choose when to accept bookings.",
   },
   {
-    question: "Is everything really done on an iPhone?",
+    question: "Is there any investment or fee?",
     answer:
-      "Yes. All reels are shot and edited on iPhone 13 Pro or newer. This allows us to maintain quality and speed without needing bulky equipment.",
+      "None. You only need your iPhone. We handle training and gear.",
   },
   {
-    question: "How fast is the delivery really?",
+    question:
+      "Will I get support after onboarding?",
     answer:
-      "On average, your reel is delivered within 10-15 minutes post shoot. No waiting for days or weeks.",
+      "Yes. Our support and operations team is always available.",
   },
   {
-    question: "Can I book a specific creator or a female ProShooter?",
+    question:
+      "Can I apply if I'm not in India?",
     answer:
-      "Yes, you can request a prefferred ProShooter or a female creator while booking. Subject to availability.",
-  },
-  {
-    question: "What id I cancel my booking?",
-    answer:
-      " A ₹699 cancellation fee applies if cancelled less than 3 hours before the shoot.",
-  },
-  {
-    question: "Is travel included in the pricing?",
-    answer:
-      "Travel is included within 15 km. Beyond that, clients must reimburse travel (via pertrol or Rapido bill).",
-  },
-  {
-    question: "Can I directly contact the ProShooter after booking?",
-    answer:
-      "No. For coordination or changes, always reach out to the ProShoot team. Please do not contact ProShooters directly. ",
-  },
-  {
-    question: "Do you operate outside India?",
-    answer:
-      "Yes, ProShoot is currently active in India, kochi with city-specific availability.",
-  },
-  {
-    question: "What kind of shoots does ProShoot handle?",
-     answer:`• Weddings 
-     • Brand campaingns 
-     •Restaurant or product reels
-     • Indluencer content
-     • College & cultural fests
-     • Personal moments (birthdays, surprises,Pre-wedding etc.)`,
+      "Yes! We are live in the UAE, USA and expanding to more countries. ",
   },
 ];
 
-const HomeFrqQuestions = () => {
-  const [expanded, setExpanded] = useState(null);
 
-   const handleChange = (panel) => (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : null);
-  };
+const FAQ = () => {
+  const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <Box
-      sx={{
-        background:
-          "radial-gradient(circle at top, #5b0f14 0%, #2b0508 70%)",
-        color: "#fff",
-        padding: { xs: "40px 20px", md: "80px 100px" },
-      }}
-    >
-      {/* Heading */}
-      <Box textAlign="center" mb={6}>
-        <Typography
-          variant="caption" className="border-1 border-orange-900/100"
-          sx={{
-            backgroundColor: "#7a1c22",
-            padding: "6px 14px",
-            borderRadius: "20px",
-            display: "inline-block",
-            marginBottom: "12px",
-            fontSize: "10px",
-            letterSpacing: "1px",
-          }}
-        ><AutoAwesomeOutlinedIcon className="text-red-500"/>
-          FREQUENTLY ASKED QUESTIONS
-        </Typography>
+    <section className="w-full bg-gradient-to-br from-[#2b0006] via-[#4b000a] to-[#2b0006]">
+      <div className="max-w-[900px] mx-auto px-5 py-20 text-white">
+        
+        {/* HEADER */}
+        <div className="text-center mb-12">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm bg-white/10 mb-3 border border-white/20">
+            <AutoAwesomeOutlinedIcon className="text-red-500" />
+            Frequently Asked Questions
+          </span>
 
-        <Typography variant="h4" fontWeight="bold" mb={1}>
-          Got Questions?
-        </Typography>
+          <h1 className="text-[32px] md:text-[42px] font-bold my-3">
+            Got Questions?
+          </h1>
 
-        <Typography variant="body2" sx={{ color: "#9e9797ff" }}>
-          Everything you need to know about becoming a ProShooter
-        </Typography>
-      </Box>
+          <p className="text-gray-400 text-lg">
+            Everything you need to know about Wedding Website Templates
+          </p>
+        </div>
 
-      {/* FAQ Accordions Centered */}
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center", // centers horizontally
-          gap: "12px", // spacing between accordions
-        }}
-      >
-        {faqData.map((item, index) => (
-          <Accordion
-            key={index}
-            expanded={expanded === index}
-            onChange={handleChange(index)}
-            sx={{
-              backgroundColor: "rgba(255,255,255,0.05)",
-              color: "#e1dcdcff",
-              minHeight: "50px",
-              width: { xs: "100%", sm: "700px" }, // responsive width
-              borderRadius: "12px",
-              boxShadow: "none",
-              "&:before": { display: "none" },
-               "&:hover": {
-              backgroundColor: "rgba(255,255,255,0.15)", 
-            },
-            }}
-          >
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "rgb(248, 243, 243)" }} />}
-            >
-              <Typography fontWeight={500}>{item.question}</Typography>
-            </AccordionSummary>
+        {/* FAQ LIST */}
+        <div className="space-y-5">
+          {faqs.map((item, index) => {
+            const isOpen = openIndex === index;
 
-            <AccordionDetails>
-              <Typography
-                variant="body2"
-                sx={{ color: "#b7b4b4", lineHeight: 1.6 }}
+            return (
+              <div
+                key={index}
+                onClick={() =>
+                  setOpenIndex(isOpen ? null : index)
+                }
+                className="group cursor-pointer rounded-xl p-5 md:p-6
+                  bg-white/5 border border-transparent transition-all duration-300 hover:border-red-500"    
               >
-                {item.answer}
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-        ))}
-      </Box>
-    </Box>
+                {/* QUESTION */}
+                <div className="flex justify-between items-center">
+                    <h3 className="text-base md:text-lg font-semibold pr-4 transition-colors duration-300 text-white group-hover:text-red-400">
+                      {item.question}
+                    </h3>
+
+                  {/* ARROW (always white) */}
+                  <span
+                    className={`text-xl transition-transform duration-300
+                      ${isOpen ? "text-red-500 rotate-180" : "text-white"}
+                    `}
+                  >
+                   <KeyboardArrowDownOutlinedIcon/>
+                  </span>
+                </div>
+
+                {/* ANSWER */}
+                {isOpen && (
+                  <p className="mt-4 text-gray-300 text-sm md:text-[15px] leading-relaxed">
+                    {item.answer}
+                  </p>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
   );
 };
-export default HomeFrqQuestions;
+
+export default FAQ;
